@@ -41,5 +41,10 @@ class Set(db.Model):
     time = db.Column(db.DateTime, nullable=False)  # Time will be used to order when sets are completed within workout
 
 
-
-
+class Supplement(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
+    serving_amount = db.Column(db.Integer, nullable=False)
+    serving_type = db.Column(db.String(20), nullable=False)  # Cup, oz, gram, etc.
+    time = db.Column(db.DateTime, nullable=False)
