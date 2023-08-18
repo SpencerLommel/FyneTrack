@@ -33,11 +33,6 @@ def load_user(user_id):
 with app.app_context():
     db.create_all()
 
-# Forms should be broken out into their own separate forms.py class
-
-
-# Routes should be broken out into their own separate routes.py class
-
 
 if __name__ == '__main__':
     init_routes(app)

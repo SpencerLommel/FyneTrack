@@ -1,3 +1,6 @@
+# Spencer Lommel
+# Aug 18th, 2023
+
 from flask import render_template, redirect, url_for, flash
 from forms.forms import RegisterForm, LoginForm
 from models.models import User, db
