@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Create an Account</h1>
+  <form method="POST" action="/register">
+    {{ form.csrf_token }}
+    {{ form.email_or_username.label }} {{ form.email_or_username(size=20) }} <br>
+    {{ form.password.label }} {{ form.password(size=20) }} <br>
+    <input type="submit" value="Go">
+  </form>
+
+
+
+
+{% endblock %}
